@@ -1,4 +1,4 @@
-const { sum, doThrow } = require('../main.js')
+const { sum, doThrow, doFetch } = require('../main.js')
 
 describe('main.js', () => {
     describe('sum', () => {
@@ -12,5 +12,29 @@ describe('main.js', () => {
     it('doThrow', function () {
         expect(doThrow).toThrow('Unknown error')
         expect(doThrow).toThrow(Error)
+    })
+
+    describe('doFetch - промисы', () => {
+        it('success', () => {
+            doFetch(10).then((data) => {
+                expect(data).toBe(11)
+            })
+
+            expect(doFetch(10)).resolves.toBe(11)
+        })
+
+        it('error', () => {
+            doFetch(-1).catch((e) => {
+                expect(e.message).toBe('Bad number')
+            })
+        })
+
+        it('catch error', async () => {
+            try {
+                await doFetch(-1)
+            } catch (e) {
+                expect(e.message).toBe('Bad number')
+            }
+        })
     })
 })
