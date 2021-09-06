@@ -1,8 +1,10 @@
-const { sum, doThrow, doFetch } = require('../main.js')
+import { sum, doThrow, doFetch } from '../main'
 
 describe('main.js', () => {
     describe('sum', () => {
         it('when the answer is correct', () => {
+            const a: number = 1
+
             const result = sum(5, 12)
 
             expect(result).toBe(17)

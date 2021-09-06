@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./build",
+    "outFile": "./build/bundle.js",
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "target": "ES5",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+//    "strict": true,
+//    "noImplicitAny": true,
+//    "alwaysStrict": true,
+//    "strictPropertyInitialization": true,
+//    "strictNullChecks": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
+  ]
+}
