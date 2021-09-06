@@ -1,4 +1,4 @@
-const { sum } = require('../main.js')
+const { sum, doThrow } = require('../main.js')
 
 describe('main.js', () => {
     describe('sum', () => {
@@ -7,5 +7,10 @@ describe('main.js', () => {
 
             expect(result).toBe(17)
         })
+    })
+
+    it('doThrow', function () {
+        expect(doThrow).toThrow('Unknown error')
+        expect(doThrow).toThrow(Error)
     })
 })
