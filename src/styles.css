@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.app {
+    border: 1px solid gray;
+    width: 60vw;
+    height: 35vh;
+
+    padding: 10px;
+    border-radius: 10px;
+}
