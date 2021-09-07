@@ -1,0 +1,8 @@
+node_modules
+coverage
+build
+lib
+*.env
+package-lock.json
+yarn.lock
+.gitignore

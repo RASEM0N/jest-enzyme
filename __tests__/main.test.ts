@@ -1,17 +1,15 @@
-import { sum, doThrow, doFetch } from '../main'
+import { sum, doThrow, doFetch } from '../src/main'
 
 describe('main.js', () => {
     describe('sum', () => {
         it('when the answer is correct', () => {
-            const a: number = 1
-
             const result = sum(5, 12)
 
             expect(result).toBe(17)
         })
     })
 
-    it('doThrow', function () {
+    it('doThrow', () => {
         expect(doThrow).toThrow('Unknown error')
         expect(doThrow).toThrow(Error)
     })

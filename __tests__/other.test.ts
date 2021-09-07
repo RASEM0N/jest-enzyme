@@ -24,6 +24,7 @@ describe('other', () => {
         })
 
         it('reject', () => {
+            // eslint-disable-next-line prefer-promise-reject-errors
             expect(Promise.reject(40)).rejects.toBe(40)
         })
     })
