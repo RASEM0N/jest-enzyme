@@ -47,10 +47,6 @@ describe('Common.jsx with mock', () => {
         component = mount(<Common />)
     })
 
-    it('just render', () => {
-        console.log(component.debug())
-    })
-
     it('click on the incr button', () => {
         const btnIncr = component.find('#incr')
         btnIncr.simulate('click')

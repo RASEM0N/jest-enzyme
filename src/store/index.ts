@@ -16,13 +16,17 @@ const rootSaga = function* () {
 // ----- STORE -------
 // -------------------
 
-export const store = configureStore({
-    devTools: true,
-    reducer: {
-        common: commonReducer,
-    },
-    middleware: [sagaMiddleware],
-})
+export const createStore = () => {
+    return configureStore({
+        devTools: true,
+        reducer: {
+            common: commonReducer,
+        },
+        middleware: [sagaMiddleware],
+    })
+}
+
+export const store = createStore()
 
 sagaMiddleware.run(rootSaga)
 
@@ -32,6 +36,7 @@ sagaMiddleware.run(rootSaga)
 export const useAppDispatch = () => {
     return useDispatch<AppDispatch>()
 }
+
 export type AppStoreType = typeof store
 export type AppDispatch = typeof store.dispatch
 export type StateType = ReturnType<typeof store.getState>
