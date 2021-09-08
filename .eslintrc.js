@@ -3,7 +3,14 @@ module.exports = {
         browser: true,
         es2021: true,
     },
-    plugins: ['@typescript-eslint', 'prettier', 'jest', 'promise', 'react'],
+    plugins: [
+        '@typescript-eslint',
+        'prettier',
+        'jest',
+        'promise',
+        'react',
+        'react-hooks',
+    ],
     extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:import/errors',
@@ -16,6 +23,7 @@ module.exports = {
         // 'plugin:promise/recommended',
         'plugin:jest/style',
         'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
