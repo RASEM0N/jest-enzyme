@@ -19,6 +19,17 @@ describe('CommonLocal.tsx', () => {
 
         btnIncr.simulate('click')
 
-        expect(h2.text()).toBe(2)
+        expect(h2.text()).toBe('1')
+    })
+
+    it('click on the decrement button', () => {
+        const component = mount(<CommonLocale />)
+
+        const h2 = component.find('h2')
+        const btnDescr = component.find('#decr')
+
+        btnDescr.simulate('click')
+
+        expect(h2.text()).toBe('-1')
     })
 })
