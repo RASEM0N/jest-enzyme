@@ -1,4 +1,3 @@
-import 'jsdom-global/register'
 import React from 'react'
 import CommonLocale from '../CommonLocal'
 import { shallow, render, mount } from 'enzyme'
@@ -7,7 +6,7 @@ describe('CommonLocal.tsx', () => {
     it('shapshot - render', () => {
         const component = mount(<CommonLocale />)
 
-        expect(component).toMatchSnapshot()
+        expect(component.debug()).toMatchSnapshot()
     })
 
     it('click on the increment button', () => {

@@ -32,5 +32,6 @@ sagaMiddleware.run(rootSaga)
 export const useAppDispatch = () => {
     return useDispatch<AppDispatch>()
 }
+export type AppStoreType = typeof store
 export type AppDispatch = typeof store.dispatch
 export type StateType = ReturnType<typeof store.getState>

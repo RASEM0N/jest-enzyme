@@ -1,6 +1,6 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-    verbose: true,
+    // verbose: true,
     clearMocks: true,
     coverageDirectory: 'coverage',
     testRegex: '(.*\\/__tests__\\/.*|\\.(test|spec))\\.(js|jsx|ts|tsx)$',
