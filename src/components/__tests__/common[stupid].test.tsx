@@ -4,13 +4,12 @@ import Common from '../Common'
 
 let mockUseSelector: jest.Mock<any, any>
 let mockUseAppDispatch: jest.Mock<any, any>
+let mockDispatch
 let mockIncrement: jest.Mock<any, any>
 let mockDecrement: jest.Mock<any, any>
 
 jest.mock('react-redux', () => {
-    mockUseSelector = jest.fn().mockImplementation(() => {
-        return 1
-    })
+    mockUseSelector = jest.fn().mockReturnValue(1)
 
     return {
         useSelector: mockUseSelector,
@@ -18,10 +17,9 @@ jest.mock('react-redux', () => {
 })
 
 jest.mock('../../store', () => {
+    mockDispatch = jest.fn()
     mockUseAppDispatch = jest.fn().mockImplementation(() => {
-        return () => {
-            //...
-        }
+        return mockDispatch
     })
 
     return {
@@ -47,14 +45,17 @@ describe('Common.jsx with mock', () => {
         component = mount(<Common />)
     })
 
+    // afterEach(() => {
+    //     mockIncrement.mockClear()
+    // })
+
     it('click on the incr button', () => {
         const btnIncr = component.find('#incr')
         btnIncr.simulate('click')
 
-        expect(mockUseSelector).toHaveBeenCalledTimes(1)
-        expect(mockUseAppDispatch).toHaveBeenCalledTimes(1)
-        expect(mockIncrement).toHaveBeenCalledTimes(1)
-        expect(mockDecrement).toHaveBeenCalledTimes(0)
+        expect(mockDispatch).toHaveBeenCalledWith(mockIncrement())
+        expect(mockIncrement).toHaveBeenCalled()
+        expect(mockDecrement).not.toHaveBeenCalled()
     })
 
     it('click on the decr button', () => {
@@ -63,7 +64,7 @@ describe('Common.jsx with mock', () => {
 
         expect(mockUseSelector).toHaveBeenCalledTimes(1)
         expect(mockUseAppDispatch).toHaveBeenCalledTimes(1)
-        expect(mockIncrement).toHaveBeenCalledTimes(0)
+        expect(mockIncrement).not.toHaveBeenCalled()
         expect(mockDecrement).toHaveBeenCalledTimes(1)
     })
 })
