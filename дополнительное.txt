@@ -1,0 +1,14 @@
+Руководства
+    - Асинхронность                 https://jestjs.io/ru/docs/tutorial-async
+    - Timer mocks                   https://jestjs.io/ru/docs/timer-mocks
+    - Пользовательские имитации     https://jestjs.io/ru/docs/manual-mocks
+    - Имитаторы классов ES6         https://jestjs.io/ru/docs/es6-class-mocks
+    - Обходим иммитации модулей     https://jestjs.io/ru/docs/bypassing-module-mocks
+
+API
+    - глобальные значения           https://jestjs.io/ru/docs/api
+    - expect                        https://jestjs.io/ru/docs/expect
+
+    - mock функции                  https://jestjs.io/ru/docs/mock-function-api
+    - объекты jest                  https://jestjs.io/ru/docs/jest-object
+    - настройка jest                https://jestjs.io/ru/docs/configuration
