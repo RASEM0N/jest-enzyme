@@ -1,9 +1,10 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-    roots: ['<rootDir>/__tests__'],
-    testRegex: '(/.*\\.test)\\.(ts|js)$',
+    // verbose: true,
     clearMocks: true,
     coverageDirectory: 'coverage',
+    testRegex: '(.*\\/__tests__\\/.*|\\.(test|spec))\\.(js|jsx|ts|tsx)$',
+    // testRegex: '(/.*\\.(test|spec))\\.(ts|js|tsx|jsx)$',
     preset: 'ts-jest',
-    testEnvironment: 'node',
+    // setupFiles: ['<rootDir>/jest.setup.ts'],
 }
