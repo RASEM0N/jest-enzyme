@@ -1,5 +1,10 @@
 name: test
 
+on:
+    push:
+        branches:
+            - react
+
 jobs:
     jest:
         runs-on: node:14.17.0-alpine
