@@ -1,7 +1,7 @@
 {
     "name": "test-functionals",
     "version": "1.0.0",
-    "main": "index.ts",
+    "main": "src/index.tsx",
     "license": "MIT",
     "scripts": {
         "dev": "parcel src/index.html -p 3000",
@@ -10,7 +10,7 @@
         "lint": "eslint",
         "lint:fix": "eslint --fix",
         "lint:editorconfig": "editorconfig-checker",
-        "prettier": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\"",
+        "prettier": "prettier --write \"src/**/*.(ts|tsx)\"",
         "husky:prepare": "husky install"
     },
     "devDependencies": {
