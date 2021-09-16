@@ -1,0 +1,14 @@
+name: lint
+
+jobs:
+    eslint:
+        runs-on: node:14.17.0-alpine
+        steps:
+            - name: Checkout
+              uses: action/checkout@v2
+              with:
+                  ref: react
+            - name: Install devendencies
+              run: npm install
+            - name: Lint source code with ESLint
+              run: npm run lint

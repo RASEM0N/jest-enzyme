@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common.tsx smart components snapshots 1`] = `
+"<Provider store={{...}}>
+  <Common>
+    <h2>
+      0
+    </h2>
+    <button id=\\"incr\\" onClick={[Function: incr]}>
+      +1
+    </button>
+    <button id=\\"decr\\" onClick={[Function: decr]}>
+      -1
+    </button>
+    <button id=\\"asyncIncr\\" onClick={[Function: asyncIncr]}>
+      async +1
+    </button>
+    <button id=\\"asyncDecr\\" onClick={[Function: asyncDecr]}>
+      async -1
+    </button>
+  </Common>
+</Provider>"
+`;
