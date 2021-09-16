@@ -8,9 +8,9 @@ on:
 jobs:
     eslint:
         runs-on: ubuntu-latest
-            strategy:
-                matrix:
-                    node-version: [ 14.x ]
+        strategy:
+            matrix:
+                node-version: [ 14.x ]
         steps:
             -   name: Checkout
                 uses: action/checkout@v2
