@@ -25,7 +25,7 @@ jobs:
             -   name: Install Dependencies
                 run: npm install
             -   name: Lint source code with ESLint
-                run: npm lint
+                run: npm run lint
     test-jest:
         runs-on: ubuntu-latest
         strategy:
@@ -46,5 +46,5 @@ jobs:
             - name: Install Dependencies
               run: npm install
             - name: Test code with Jest and Enzyme
-              run: npm test
+              run: npm run test
 
