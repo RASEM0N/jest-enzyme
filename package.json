@@ -10,7 +10,8 @@
         "lint": "eslint",
         "lint:fix": "eslint --fix",
         "lint:editorconfig": "editorconfig-checker",
-        "prettier": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\""
+        "prettier": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\"",
+        "husky:prepare": "husky install"
     },
     "devDependencies": {
         "@types/enzyme": "^3.10.9",
@@ -34,9 +35,11 @@
         "eslint-plugin-promise": "^5.1.0",
         "eslint-plugin-react": "^7.25.1",
         "eslint-plugin-react-hooks": "^4.2.0",
+        "husky": "^7.0.2",
         "jest": "^27.1.0",
         "jsdom": "^17.0.0",
         "jsdom-global": "^3.0.2",
+        "lint-staged": "^11.1.2",
         "parcel-bundler": "^1.12.5",
         "prettier": "^2.3.2",
         "redux-saga-test-plan": "^4.0.3",
