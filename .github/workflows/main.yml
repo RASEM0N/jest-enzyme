@@ -6,43 +6,25 @@ on:
 
 jobs:
     lint:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [ 14.x ]
+        container:
+            image: node:14.17.0-alpine
         steps:
             -   name: Checkout
                 uses: actions/checkout@v2
                 with:
                     ref: react
-
-            -   name: Use Node.js ${{ matrix.node-version }}
-                uses: actions/setup-node@v2
-                with:
-                    node-version: ${{ matrix.node-version }}
-                    cache: 'npm'
-
             -   name: Install Dependencies
                 run: npm install
             -   name: Lint source code with ESLint
                 run: npm run lint
     test-jest:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [14.x]
+        container:
+            image: node:14.17.0-alpine
         steps:
             - name: Checkout
               uses: actions/checkout@v2
               with:
                   ref: react
-
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v2
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: 'npm'
-
             - name: Install Dependencies
               run: npm install
             - name: Test code with Jest and Enzyme
