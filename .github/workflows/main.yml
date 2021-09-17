@@ -6,6 +6,7 @@ on:
 
 jobs:
     lint:
+        runs-on: ubuntu-latest
         container:
             image: node:14.17.0-alpine
         steps:
@@ -18,6 +19,7 @@ jobs:
             -   name: Lint source code with ESLint
                 run: npm run lint
     test-jest:
+        runs-on: ubuntu-latest
         container:
             image: node:14.17.0-alpine
         steps:
